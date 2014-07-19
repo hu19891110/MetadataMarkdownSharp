@@ -1,7 +1,7 @@
 MetadataMarkdownSharp
 ==================
 
-A wrapper for [MarkdownSharp](https://code.google.com/p/markdownsharp/) that adds support for [MultiMarkdown](http://fletcherpenney.net/multimarkdown/) style metadata at the top of the markdown content.
+A wrapper for [MarkdownSharp](https://code.google.com/p/markdownsharp/) that enables support for [MultiMarkdown](http://fletcherpenney.net/multimarkdown/) style metadata in markdown content.
 
 ## Usage
 

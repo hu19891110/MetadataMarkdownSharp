@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MetadataMarkdownSharp")]
-[assembly: AssemblyDescription("A wrapper for MarkdownSharp that adds support for MultiMarkdown style metadata at the top of the markdown content.")]
+[assembly: AssemblyDescription("A wrapper for MarkdownSharp that enables support for MultiMarkdown style metadata in markdown content.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Brad Westness")]
 [assembly: AssemblyProduct("MetadataMarkdownSharp")]
