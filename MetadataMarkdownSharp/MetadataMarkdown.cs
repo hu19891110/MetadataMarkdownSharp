@@ -34,7 +34,14 @@ namespace MetadataMarkdownSharp
         public new string Transform(string text)
         {
             var metadataSection = GetMetadataSection(text);
+
+            if (string.IsNullOrWhiteSpace(metadataSection))
+            {
+                return base.Transform(text);
+            }
+
             var markdownSection = text.Substring(metadataSection.Length);
+
             return base.Transform(markdownSection);
         }
 

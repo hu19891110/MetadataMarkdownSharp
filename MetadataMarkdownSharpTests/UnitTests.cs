@@ -12,12 +12,12 @@ namespace MetadataMarkdownSharpTests
         public void TransformNull()
         {
             // arrange
-            var metadataMarkdown = new MetadataMarkdown();
             var markdown = new Markdown();
+            var metadataMarkdown = new MetadataMarkdown();
 
             // act
-            var metadataMarkdownResult = metadataMarkdown.Transform(TestData.Null);
             var markdownResult = markdown.Transform(TestData.Null);
+            var metadataMarkdownResult = metadataMarkdown.Transform(TestData.Null);
 
             // assert
             Assert.AreEqual(markdownResult, metadataMarkdownResult);
@@ -80,7 +80,8 @@ namespace MetadataMarkdownSharpTests
             var metadataMarkdownResult = metadataMarkdown.Transform(TestData.MetadataMarkdown);
 
             // assert
-            Assert.AreEqual(markdownResult, metadataMarkdownResult);
+            Assert.AreNotEqual(markdownResult, metadataMarkdownResult);
+            Assert.IsTrue(markdownResult.Length > metadataMarkdownResult.Length);
         }
 
         [TestMethod]
