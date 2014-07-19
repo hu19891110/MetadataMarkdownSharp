@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Brad Westness</authors>
+    <owners>Brad Westness</owners>
+    <licenseUrl>https://github.com/bradwestness/MetadataMarkdownSharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/bradwestness/MetadataMarkdownSharp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A wrapper for MarkdownSharp which enables support for MultiMarkdown style metadata elements in Markdown content.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>Markdown MultiMarkdown MarkdownSharp Metadata</tags>
+    <dependencies>
+      <dependency id="MarkdownSharp" version="1.13.0" />
+    </dependencies>
+  </metadata>
+</package>

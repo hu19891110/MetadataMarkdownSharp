@@ -1,5 +1,5 @@
-﻿using MetadataMarkdownSharp;
-using MarkdownSharp;
+﻿using MarkdownSharp;
+using MetadataMarkdownSharp;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 
