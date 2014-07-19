@@ -49,6 +49,12 @@ namespace MetadataMarkdownSharp
 
         #region Public Methods
 
+        /// <summary>
+        /// Parses the metadata section at the head of a markdown document
+        /// into a collection if key/value pairs
+        /// </summary>
+        /// <param name="text">A string containing some Markdown with or without metadata</param>
+        /// <returns>A list of key/value pairs of all metadata items at the top of the markdown text</returns>
         public IEnumerable<KeyValuePair<string, string>> Metadata(string text)
         {
             var metadataSection = GetMetadataSection(text);
@@ -77,7 +83,7 @@ namespace MetadataMarkdownSharp
 
                     if (string.IsNullOrWhiteSpace(line))
                     {
-                        // MetadataMarkdown section ends at the first blank line
+                        // metadata section ends at the first blank line
                         break;
                     }
 
@@ -102,18 +108,18 @@ namespace MetadataMarkdownSharp
 
                         if (string.IsNullOrWhiteSpace(line))
                         {
-                            // MetadataMarkdown section ends at the first blank line
+                            // metadata section ends at the first blank line
                             break;
                         }
 
                         if (!line.Contains(":"))
                         {
-                            // MetadataMarkdown lines must contain a colon to separate the key from the value
+                            // metadata lines must contain a colon to separate the key from the value
                             continue;
                         }
 
                         // we already verified that the line contains a colon
-                        // so this will never be negative or out of range
+                        // so this should never be negative or out of range
                         var keyValueSeparatorPosition = line.IndexOf(':');
                         var key = line.Substring(0, keyValueSeparatorPosition).Trim();
                         var value = line.Substring(keyValueSeparatorPosition + 1).Trim();
