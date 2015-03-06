@@ -13,7 +13,7 @@ There are only two differences between MetadataMarkdown and vanilla MarkdownShar
 ## Example
 <pre><code>
     string content = ...; // Some markdown formatted content with metadata
-    string html = new MultiMarkdown().Transform(content);
-    IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; metdadata = new MultiMarkdown().Metadata(content);
+    string html = new MetadataMarkdown().Transform(content);
+    IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; metdadata = new MetadataMarkdown().Metadata(content);
     string author = metadata.Single(x => x.Key == "Author").Value;
 </code></pre>
